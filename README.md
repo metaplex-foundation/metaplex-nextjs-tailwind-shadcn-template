@@ -7,6 +7,7 @@ This is a downloadable reusable UI template that utilizes Nextjs and Tailwind fo
 
 - Nextjs React framework
 - Tailwind
+- Shadcn Component Library
 - Solana WalletAdapter
 - Metaplex Umi
 - Zustand
@@ -239,3 +240,13 @@ const transferSolToDestination = async ({
 
 export default transferSolToDestination
 ```
+
+## Component Library
+
+This template is setup to work with the Shadcn reusable components from [https://ui.shadcn.com/](https://ui.shadcn.com/).
+
+Shadcn is preinstalled so you only need to install the required components you wish to use from the documentation [https://ui.shadcn.com/docs/](https://ui.shadcn.com/docs/)
+
+## Theming
+
+Theming is handled by Shadcn and Tailwind using `CSS Variables`. Documentation regarding theming can be found here [https://ui.shadcn.com/docs/theming](https://ui.shadcn.com/docs/theming) and on Tailwinds websbite [https://tailwindcss.com/docs/](https://tailwindcss.com/docs/)
