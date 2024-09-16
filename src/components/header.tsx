@@ -16,7 +16,7 @@ const Header = () => {
         Get started by editing&nbsp;
         <code className="font-mono font-bold">src/app/page.tsx</code>
       </p>
-      <div className="flex pt-4 lg:pt-0 w-full items-end justify-center gap-4 dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
+      <div className="flex pt-4 lg:pt-0 w-full items-end justify-center gap-4 lg:static lg:size-auto lg:bg-none">
         <WalletMultiButtonDynamic />
         <ThemeSwitcher />
       </div>
