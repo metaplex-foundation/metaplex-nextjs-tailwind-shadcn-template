@@ -18,10 +18,10 @@ export default function Home() {
         />
       </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
+      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left gap-4">
         <a
           href="https://developers.metaplex.com"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100"
+          className="group rounded-lg border px-5 py-4 transition-colors"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -38,7 +38,7 @@ export default function Home() {
 
         <a
           href="https://github.com/metaplex-foundation"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100"
+          className="group rounded-lg border px-5 py-4 transition-colors"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -55,7 +55,7 @@ export default function Home() {
 
         <a
           href="https://discord.com/invite/metaplex"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100"
+          className="group rounded-lg border px-5 py-4 transition-colors"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -72,7 +72,7 @@ export default function Home() {
 
         <a
           href="https://x.com/metaplex"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100"
+          className="group rounded-lg border px-5 py-4 transition-colors"
           target="_blank"
           rel="noopener noreferrer"
         >
