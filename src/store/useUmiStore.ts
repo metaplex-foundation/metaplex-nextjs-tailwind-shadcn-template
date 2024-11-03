@@ -17,7 +17,7 @@ interface UmiState {
   updateSigner: (signer: WalletAdapter) => void;
 }
 
-const useUmiStore = create<UmiState>()((set) => ({
+const useUmiStore = create<UmiState>()((set, get) => ({
   umi: createUmi("http://api.devnet.solana.com").use(
     signerIdentity(
       createNoopSigner(publicKey("11111111111111111111111111111111"))
@@ -25,7 +25,15 @@ const useUmiStore = create<UmiState>()((set) => ({
   ),
   signer: undefined,
   updateSigner: (signer) => {
-    set(() => ({ signer: createSignerFromWalletAdapter(signer) }));
+    const currentSigner = get().signer;
+    const newSigner = createSignerFromWalletAdapter(signer);
+
+    if (
+      !currentSigner ||
+      currentSigner.publicKey.toString() !== newSigner.publicKey.toString()
+    ) {
+      set(() => ({ signer: newSigner }));
+    }
   },
 }));
 
