@@ -1,8 +1,6 @@
 "use client";
 
-import {
-  WalletProvider
-} from "@solana/wallet-adapter-react";
+import { WalletProvider } from "@solana/wallet-adapter-react";
 import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
 import React, { FC, useMemo } from "react";
 
@@ -14,7 +12,6 @@ type Props = {
 };
 
 export const WalletAdapterProvider: FC<Props> = ({ children }) => {
-
   const wallets = useMemo(
     () => [
       /**
@@ -35,13 +32,11 @@ export const WalletAdapterProvider: FC<Props> = ({ children }) => {
   );
 
   return (
-
-      <WalletProvider wallets={wallets} autoConnect>
-        <WalletModalProvider>
-          {/* Your app's components go here, nested within the context providers. */}
-          {children}
-        </WalletModalProvider>
-      </WalletProvider>
-
+    <WalletProvider wallets={wallets} autoConnect>
+      <WalletModalProvider>
+        {/* Your app's components go here, nested within the context providers. */}
+        {children}
+      </WalletModalProvider>
+    </WalletProvider>
   );
 };
