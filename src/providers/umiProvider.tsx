@@ -5,17 +5,7 @@ import useUmiStore from "@/store/useUmiStore";
 import { WalletAdapter } from "@solana/wallet-adapter-base";
 import { useWallet } from "@solana/wallet-adapter-react";
 
-import { createContext, useContext, useEffect } from "react";
-
-// interface context {
-//   // umi: Umi;
-// }
-
-// const defaultContext: context = {
-//   // umi: createUmi(EndPoints.MAINNET).use(mplTokenMetadata()),
-// };
-
-// const UmiContext = createContext<context>(defaultContext);
+import { useEffect } from "react";
 
 function UmiProvider({ children }: { children: any }) {
   const wallet = useWallet();
@@ -29,13 +19,5 @@ function UmiProvider({ children }: { children: any }) {
 
   return <>{children}</>;
 }
-
-// function useUmi() {
-//   const context = useContext(UmiContext);
-//   if (context === undefined) {
-//     throw new Error("useUmi must be used within a UmiProvider");
-//   }
-//   return context;
-// }
 
 export { UmiProvider };
